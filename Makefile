@@ -1,5 +1,6 @@
 CC=g++
-CFLAGS="--std=c++20 -I."
+CFLAGS="-I."
+LIBS=-F/System/Library/PrivateFrameworks -framework Foundation -framework MultitouchSupport
 
-default: main.cpp
-	$(CC) main.cpp -o made && ./made
+default: main.m
+	$(CC) $(LIBS) main.m -o made && ./made
