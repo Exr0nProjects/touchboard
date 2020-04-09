@@ -17,7 +17,7 @@
     @property (weak) IBOutlet NSWindow *window;
 
     // yoinked from pedia of daniel
-    @property (nonatomic, strong) NSStatusItem* statusBar;
+    @property (nonatomic, strong) NSStatusBarButton* statusBarButton;
     @property (nonatomic, strong) NSMenu *menuItem;
 
     @end
@@ -31,11 +31,10 @@
 -(void)awakeFromNib
 {
 	[super awakeFromNib];
-	self.menuItem = [[NSMenu alloc] initWithTitle:@""];
-	self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-  [self.statusBar setTitle:@"touchboard"];
-	[self.statusBar setHighlightMode:YES];
-	[self.statusBar setMenu:self.menuItem];
+	self.menuItem = [[NSMenu alloc] initWithTitle:@"menuItemContents"];
+	self.statusBarButton = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] button];
+  [self.statusBarButton setTitle:@"touchboard"];
+	[self.statusBarButton setMenu:self.menuItem];
 	
 	[self startMonitoring];
 }
