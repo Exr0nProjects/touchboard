@@ -1,0 +1,18 @@
+[
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-F/System/Library/PrivateFrameworks",
+            "-framework",
+            "Foundation",
+            "-framework",
+            "MultitouchSupport",
+            "-o",
+            "made",
+            "main.m"
+        ],
+        "directory": "/Users/lamnguyen/Desktop/projects/touchboard",
+        "file": "main.m"
+    }
+]
