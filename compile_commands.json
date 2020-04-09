@@ -3,6 +3,8 @@
         "arguments": [
             "g++",
             "-c",
+            "-I.",
+            "-fmodules-ts",
             "-F/System/Library/PrivateFrameworks",
             "-framework",
             "Foundation",
