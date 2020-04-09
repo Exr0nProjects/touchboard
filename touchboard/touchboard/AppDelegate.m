@@ -20,12 +20,9 @@
 
 CGEventRef myCGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
     NSLog(@"In the callback");
-    //0x0b is the virtual keycode for "b"
-    //0x09 is the virtual keycode for "v"
-    if ((type != kCGEventKeyDown) && (type != kCGEventKeyUp))
-        NSLog(@"event: %@", event);
-    if (CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode) == kVK_ANSI_S) {
+    if (CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode) == kVK_ANSI_F) {
         NSLog(@"event matched");
+            [[NSHapticFeedbackManager defaultPerformer] performFeedbackPattern:NSHapticFeedbackPatternGeneric performanceTime:NSHapticFeedbackPerformanceTimeNow]; // yoinked from https://github.com/lapfelix/ForceTouchVibrationCLI/blob/master/vibrate/main.m
     }
 
     return event;
