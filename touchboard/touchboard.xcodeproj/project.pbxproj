@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEBB10B0243EA8FA00BD7BE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBB10AF243EA8FA00BD7BE8 /* AppDelegate.m */; };
+		DEBB10B2243EA8FE00BD7BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB10B1243EA8FE00BD7BE8 /* Assets.xcassets */; };
+		DEBB10B5243EA8FE00BD7BE8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBB10B3243EA8FE00BD7BE8 /* MainMenu.xib */; };
+		DEBB10B8243EA8FE00BD7BE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBB10B7243EA8FE00BD7BE8 /* main.m */; };
+		DEBB10C3243EA8FE00BD7BE8 /* touchboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBB10C2243EA8FE00BD7BE8 /* touchboardTests.m */; };
+		DEBB10CE243EA8FE00BD7BE8 /* touchboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBB10CD243EA8FE00BD7BE8 /* touchboardUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEBB10BF243EA8FE00BD7BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEBB10A3243EA8FA00BD7BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEBB10AA243EA8FA00BD7BE8;
+			remoteInfo = touchboard;
+		};
+		DEBB10CA243EA8FE00BD7BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEBB10A3243EA8FA00BD7BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEBB10AA243EA8FA00BD7BE8;
+			remoteInfo = touchboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DEBB10AB243EA8FA00BD7BE8 /* touchboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBB10AE243EA8FA00BD7BE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DEBB10AF243EA8FA00BD7BE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEBB10B1243EA8FE00BD7BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEBB10B4243EA8FE00BD7BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DEBB10B6243EA8FE00BD7BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEBB10B7243EA8FE00BD7BE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEBB10B9243EA8FE00BD7BE8 /* touchboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = touchboard.entitlements; sourceTree = "<group>"; };
+		DEBB10BE243EA8FE00BD7BE8 /* touchboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touchboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBB10C2243EA8FE00BD7BE8 /* touchboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchboardTests.m; sourceTree = "<group>"; };
+		DEBB10C4243EA8FE00BD7BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEBB10C9243EA8FE00BD7BE8 /* touchboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touchboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBB10CD243EA8FE00BD7BE8 /* touchboardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchboardUITests.m; sourceTree = "<group>"; };
+		DEBB10CF243EA8FE00BD7BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEBB10A8243EA8FA00BD7BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10BB243EA8FE00BD7BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10C6243EA8FE00BD7BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEBB10A2243EA8FA00BD7BE8 = {
+			isa = PBXGroup;
+			children = (
+				DEBB10AD243EA8FA00BD7BE8 /* touchboard */,
+				DEBB10C1243EA8FE00BD7BE8 /* touchboardTests */,
+				DEBB10CC243EA8FE00BD7BE8 /* touchboardUITests */,
+				DEBB10AC243EA8FA00BD7BE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEBB10AC243EA8FA00BD7BE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEBB10AB243EA8FA00BD7BE8 /* touchboard.app */,
+				DEBB10BE243EA8FE00BD7BE8 /* touchboardTests.xctest */,
+				DEBB10C9243EA8FE00BD7BE8 /* touchboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEBB10AD243EA8FA00BD7BE8 /* touchboard */ = {
+			isa = PBXGroup;
+			children = (
+				DEBB10AE243EA8FA00BD7BE8 /* AppDelegate.h */,
+				DEBB10AF243EA8FA00BD7BE8 /* AppDelegate.m */,
+				DEBB10B1243EA8FE00BD7BE8 /* Assets.xcassets */,
+				DEBB10B3243EA8FE00BD7BE8 /* MainMenu.xib */,
+				DEBB10B6243EA8FE00BD7BE8 /* Info.plist */,
+				DEBB10B7243EA8FE00BD7BE8 /* main.m */,
+				DEBB10B9243EA8FE00BD7BE8 /* touchboard.entitlements */,
+			);
+			path = touchboard;
+			sourceTree = "<group>";
+		};
+		DEBB10C1243EA8FE00BD7BE8 /* touchboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEBB10C2243EA8FE00BD7BE8 /* touchboardTests.m */,
+				DEBB10C4243EA8FE00BD7BE8 /* Info.plist */,
+			);
+			path = touchboardTests;
+			sourceTree = "<group>";
+		};
+		DEBB10CC243EA8FE00BD7BE8 /* touchboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEBB10CD243EA8FE00BD7BE8 /* touchboardUITests.m */,
+				DEBB10CF243EA8FE00BD7BE8 /* Info.plist */,
+			);
+			path = touchboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEBB10AA243EA8FA00BD7BE8 /* touchboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEBB10D2243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboard" */;
+			buildPhases = (
+				DEBB10A7243EA8FA00BD7BE8 /* Sources */,
+				DEBB10A8243EA8FA00BD7BE8 /* Frameworks */,
+				DEBB10A9243EA8FA00BD7BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = touchboard;
+			productName = touchboard;
+			productReference = DEBB10AB243EA8FA00BD7BE8 /* touchboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEBB10BD243EA8FE00BD7BE8 /* touchboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEBB10D5243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboardTests" */;
+			buildPhases = (
+				DEBB10BA243EA8FE00BD7BE8 /* Sources */,
+				DEBB10BB243EA8FE00BD7BE8 /* Frameworks */,
+				DEBB10BC243EA8FE00BD7BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEBB10C0243EA8FE00BD7BE8 /* PBXTargetDependency */,
+			);
+			name = touchboardTests;
+			productName = touchboardTests;
+			productReference = DEBB10BE243EA8FE00BD7BE8 /* touchboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEBB10C8243EA8FE00BD7BE8 /* touchboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEBB10D8243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboardUITests" */;
+			buildPhases = (
+				DEBB10C5243EA8FE00BD7BE8 /* Sources */,
+				DEBB10C6243EA8FE00BD7BE8 /* Frameworks */,
+				DEBB10C7243EA8FE00BD7BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEBB10CB243EA8FE00BD7BE8 /* PBXTargetDependency */,
+			);
+			name = touchboardUITests;
+			productName = touchboardUITests;
+			productReference = DEBB10C9243EA8FE00BD7BE8 /* touchboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEBB10A3243EA8FA00BD7BE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = exr0n;
+				TargetAttributes = {
+					DEBB10AA243EA8FA00BD7BE8 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					DEBB10BD243EA8FE00BD7BE8 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = DEBB10AA243EA8FA00BD7BE8;
+					};
+					DEBB10C8243EA8FE00BD7BE8 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = DEBB10AA243EA8FA00BD7BE8;
+					};
+				};
+			};
+			buildConfigurationList = DEBB10A6243EA8FA00BD7BE8 /* Build configuration list for PBXProject "touchboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEBB10A2243EA8FA00BD7BE8;
+			productRefGroup = DEBB10AC243EA8FA00BD7BE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEBB10AA243EA8FA00BD7BE8 /* touchboard */,
+				DEBB10BD243EA8FE00BD7BE8 /* touchboardTests */,
+				DEBB10C8243EA8FE00BD7BE8 /* touchboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEBB10A9243EA8FA00BD7BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBB10B2243EA8FE00BD7BE8 /* Assets.xcassets in Resources */,
+				DEBB10B5243EA8FE00BD7BE8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10BC243EA8FE00BD7BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10C7243EA8FE00BD7BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEBB10A7243EA8FA00BD7BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBB10B8243EA8FE00BD7BE8 /* main.m in Sources */,
+				DEBB10B0243EA8FA00BD7BE8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10BA243EA8FE00BD7BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBB10C3243EA8FE00BD7BE8 /* touchboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB10C5243EA8FE00BD7BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBB10CE243EA8FE00BD7BE8 /* touchboardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEBB10C0243EA8FE00BD7BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEBB10AA243EA8FA00BD7BE8 /* touchboard */;
+			targetProxy = DEBB10BF243EA8FE00BD7BE8 /* PBXContainerItemProxy */;
+		};
+		DEBB10CB243EA8FE00BD7BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEBB10AA243EA8FA00BD7BE8 /* touchboard */;
+			targetProxy = DEBB10CA243EA8FE00BD7BE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEBB10B3243EA8FE00BD7BE8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEBB10B4243EA8FE00BD7BE8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEBB10D0243EA8FE00BD7BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DEBB10D1243EA8FE00BD7BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DEBB10D3243EA8FE00BD7BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = touchboard/touchboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEBB10D4243EA8FE00BD7BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = touchboard/touchboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DEBB10D6243EA8FE00BD7BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touchboard.app/Contents/MacOS/touchboard";
+			};
+			name = Debug;
+		};
+		DEBB10D7243EA8FE00BD7BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touchboard.app/Contents/MacOS/touchboard";
+			};
+			name = Release;
+		};
+		DEBB10D9243EA8FE00BD7BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = touchboard;
+			};
+			name = Debug;
+		};
+		DEBB10DA243EA8FE00BD7BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = touchboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exr0n.touchboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = touchboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEBB10A6243EA8FA00BD7BE8 /* Build configuration list for PBXProject "touchboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBB10D0243EA8FE00BD7BE8 /* Debug */,
+				DEBB10D1243EA8FE00BD7BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBB10D2243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBB10D3243EA8FE00BD7BE8 /* Debug */,
+				DEBB10D4243EA8FE00BD7BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBB10D5243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBB10D6243EA8FE00BD7BE8 /* Debug */,
+				DEBB10D7243EA8FE00BD7BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBB10D8243EA8FE00BD7BE8 /* Build configuration list for PBXNativeTarget "touchboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBB10D9243EA8FE00BD7BE8 /* Debug */,
+				DEBB10DA243EA8FE00BD7BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEBB10A3243EA8FA00BD7BE8 /* Project object */;
+}
