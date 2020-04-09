@@ -7,57 +7,124 @@
 //
 
 #import "AppDelegate.h"
+#import "MultiTouch.h"
 #import <Cocoa/Cocoa.h>
 #import <ApplicationServices/ApplicationServices.h>
 #include <Carbon/Carbon.h>
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
-@end
+    @property (weak) IBOutlet NSWindow *window;
 
-@implementation AppDelegate
+    // yoinked from pedia of daniel
+    @property (nonatomic, strong) NSStatusItem* statusBar;
+    @property (nonatomic, strong) NSMenu *menuItem;
 
-CGEventRef myCGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
-    NSLog(@"In the callback");
-    if (CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode) == kVK_ANSI_F) {
-        NSLog(@"event matched");
-            [[NSHapticFeedbackManager defaultPerformer] performFeedbackPattern:NSHapticFeedbackPatternGeneric performanceTime:NSHapticFeedbackPerformanceTimeNow]; // yoinked from https://github.com/lapfelix/ForceTouchVibrationCLI/blob/master/vibrate/main.m
+    @end
+
+    @implementation AppDelegate
+
+    static BOOL shouldTransformClick = NO;
+    static CFMachPortRef eventTap;
+    static MTDeviceRef device;
+
+-(void)awakeFromNib
+{
+	[super awakeFromNib];
+	self.menuItem = [[NSMenu alloc] initWithTitle:@""];
+	self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+  [self.statusBar setTitle:@"touchboard"];
+	[self.statusBar setHighlightMode:YES];
+	[self.statusBar setMenu:self.menuItem];
+	
+	[self startMonitoring];
+}
+
+-(void)startMonitoring
+{
+    NSLog(@"startMonitoring");
+
+    CFRunLoopSourceRef runLoopSource;
+    eventTap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionDefault, kCGEventMaskForAllEvents, myCGEventHandler, NULL);
+
+    if (!eventTap) {
+        NSLog(@"Couldn't create event tap... try regranting permissions in System Preferences!");
+        exit(1);
     }
 
-    return event;
+    runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
+
+    CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes);
+
+    CGEventTapEnable(eventTap, true);
+
+    CFRunLoopRun();
+
+    CFRelease(eventTap);
+    CFRelease(runLoopSource);
+
+    [self.menuItem removeAllItems];
+    [self.menuItem addItemWithTitle:@"Disable" action:@selector(stopMonitoring) keyEquivalent:@""];
+
+    [self.menuItem addItem:[NSMenuItem separatorItem]];
+    [self.menuItem addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  // Insert code here to initialize your application
-  NSLog(@"Hello?");
-  CFRunLoopSourceRef runLoopSource;
+-(void)stopMonitoring
+{
+    NSLog(@"stopMonitoring");
 
-  CFMachPortRef eventTap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionDefault, kCGEventMaskForAllEvents, myCGEventCallback, NULL);
-
-  if (!eventTap) {
-      NSLog(@"Couldn't create event tap!");
-      exit(1);
-  }
-
-  runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
-
-  CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes);
-
-  CGEventTapEnable(eventTap, true);
-
-  CFRunLoopRun();
-
-  CFRelease(eventTap);
-  CFRelease(runLoopSource);
-
-  NSLog(@"goodbye");
+    [self.menuItem removeAllItems];
+    [self.menuItem addItemWithTitle:@"Enable" action:@selector(startMonitoring) keyEquivalent:@""];
+    [self.menuItem addItem:[NSMenuItem separatorItem]];
+    [self.menuItem addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
 }
 
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-  // Insert code here to tear down your application
+void touchCallback(MTDeviceRef device, MTTouch touches[], size_t numTouches, double timestamp, size_t frame)
+{
+    // yoinked from https://encyclopediaofdaniel.com/blog/making-the-magic-trackpad-work/
+    shouldTransformClick = NO;
+    if(numTouches == 1)
+    {
+        MTTouch* touch = &touches[0];
+        float x = touch->normalizedVector.position.x;
+        if(x >= 0.5)
+        {
+            shouldTransformClick = YES;
+        }
+    }
 }
 
+CGEventRef myCGEventHandler(CGEventTapProxy proxy, CGEventType type, CGEventRef eventRef, void *refcon) {
+    NSLog(@"In the callback");
+
+    if(shouldTransformClick == NO)
+    {
+        return eventRef;
+    }
+    if(type != kCGEventLeftMouseUp && type != kCGEventLeftMouseDown)
+    { // only transform leftup and leftdown events
+        return eventRef;
+    }
+    NSEvent* event = [NSEvent eventWithCGEvent:eventRef];
+    if(!event) // don't try to dereference a nullptr
+        return eventRef;
+
+    // create a event source to create a related event... https://developer.apple.com/documentation/coregraphics/cgeventsourceref?language=objc
+    CGEventSourceRef sourceRef = CGEventCreateSourceFromEvent(eventRef);
+    CGPoint point = CGEventGetLocation(eventRef);
+    CGEventRef newRef;
+    if(type == kCGEventLeftMouseDown)
+    { // make a right mouse down if the event is a left mouse down
+        newRef = CGEventCreateMouseEvent(sourceRef, kCGEventRightMouseDown, point, kCGMouseButtonRight);
+    }
+    else
+    { // make a right mouse up
+        newRef = CGEventCreateMouseEvent(sourceRef, kCGEventRightMouseUp, point, kCGMouseButtonRight);
+    }
+
+    return newRef;
+    // [[NSHapticFeedbackManager defaultPerformer] performFeedbackPattern:NSHapticFeedbackPatternGeneric performanceTime:NSHapticFeedbackPerformanceTimeNow]; // yoinked from https://github.com/lapfelix/ForceTouchVibrationCLI/blob/master/vibrate/main.m
+}
 
 @end

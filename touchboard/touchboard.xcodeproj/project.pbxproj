@@ -47,6 +47,7 @@
 		DEBB10C9243EA8FE00BD7BE8 /* touchboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touchboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBB10CD243EA8FE00BD7BE8 /* touchboardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchboardUITests.m; sourceTree = "<group>"; };
 		DEBB10CF243EA8FE00BD7BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC0C121243FAC0E00C234D2 /* MultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiTouch.h; path = ../../../../MouseFun/RCR/MultiTouch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		DEBB10AD243EA8FA00BD7BE8 /* touchboard */ = {
 			isa = PBXGroup;
 			children = (
+				DEC0C121243FAC0E00C234D2 /* MultiTouch.h */,
 				DEBB10AE243EA8FA00BD7BE8 /* AppDelegate.h */,
 				DEBB10AF243EA8FA00BD7BE8 /* AppDelegate.m */,
 				DEBB10B1243EA8FE00BD7BE8 /* Assets.xcassets */,
