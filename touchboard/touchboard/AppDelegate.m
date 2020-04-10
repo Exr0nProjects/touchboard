@@ -27,13 +27,14 @@
     static BOOL shouldTransformClick = NO;
     static CFMachPortRef eventTap;
     static MTDeviceRef device;
+const unsigned long device_id = 0x14611000;
 
 -(void)awakeFromNib
 {
 	[super awakeFromNib];
 	self.menuItem = [[NSMenu alloc] initWithTitle:@"menuItemContents"];
 	self.statusBarButton = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] button];
-  [self.statusBarButton setTitle:@"touchboard"];
+    [self.statusBarButton setTitle:@"touchboard"];
 	[self.statusBarButton setMenu:self.menuItem];
 	
 	[self startMonitoring];
@@ -41,6 +42,10 @@
 
 -(void)startMonitoring
 {
+    NSLog(@"Getting Devices");
+    // https://stackoverflow.com/questions/11928567/how-do-i-tell-what-type-of-multitouch-device-an-mtdeviceref-is
+    // device = MTDeviceCreateDefault(); // TODO: what does this even do??
+
     NSLog(@"startMonitoring");
 
     CFRunLoopSourceRef runLoopSource;
@@ -62,6 +67,7 @@
     CFRelease(eventTap);
     CFRelease(runLoopSource);
 
+    // TODO: fix all menuItem stuff because old methods got deprecated/removed
     [self.menuItem removeAllItems];
     [self.menuItem addItemWithTitle:@"Disable" action:@selector(stopMonitoring) keyEquivalent:@""];
 
@@ -73,6 +79,7 @@
 {
     NSLog(@"stopMonitoring");
 
+    // TODO: fix all menuItem stuff because old methods got deprecated/removed
     [self.menuItem removeAllItems];
     [self.menuItem addItemWithTitle:@"Enable" action:@selector(startMonitoring) keyEquivalent:@""];
     [self.menuItem addItem:[NSMenuItem separatorItem]];
@@ -97,33 +104,21 @@ void touchCallback(MTDeviceRef device, MTTouch touches[], size_t numTouches, dou
 CGEventRef myCGEventHandler(CGEventTapProxy proxy, CGEventType type, CGEventRef eventRef, void *refcon) {
     NSLog(@"In the callback");
 
-    if(shouldTransformClick == NO)
-    {
-        return eventRef;
-    }
-    if(type != kCGEventLeftMouseUp && type != kCGEventLeftMouseDown)
-    { // only transform leftup and leftdown events
-        return eventRef;
-    }
+   return eventRef;
+
     NSEvent* event = [NSEvent eventWithCGEvent:eventRef];
     if(!event) // don't try to dereference a nullptr
         return eventRef;
 
+    return eventRef;
+  
     // create a event source to create a related event... https://developer.apple.com/documentation/coregraphics/cgeventsourceref?language=objc
     CGEventSourceRef sourceRef = CGEventCreateSourceFromEvent(eventRef);
     CGPoint point = CGEventGetLocation(eventRef);
-    CGEventRef newRef;
-    if(type == kCGEventLeftMouseDown)
-    { // make a right mouse down if the event is a left mouse down
-        newRef = CGEventCreateMouseEvent(sourceRef, kCGEventRightMouseDown, point, kCGMouseButtonRight);
-    }
-    else
-    { // make a right mouse up
-        newRef = CGEventCreateMouseEvent(sourceRef, kCGEventRightMouseUp, point, kCGMouseButtonRight);
-    }
+    CGEventRef newRef = eventRef;
 
-    return newRef;
-    // [[NSHapticFeedbackManager defaultPerformer] performFeedbackPattern:NSHapticFeedbackPatternGeneric performanceTime:NSHapticFeedbackPerformanceTimeNow]; // yoinked from https://github.com/lapfelix/ForceTouchVibrationCLI/blob/master/vibrate/main.m
+    return eventRef;
+    [[NSHapticFeedbackManager defaultPerformer] performFeedbackPattern:NSHapticFeedbackPatternGeneric performanceTime:NSHapticFeedbackPerformanceTimeNow]; // yoinked from https://github.com/lapfelix/ForceTouchVibrationCLI/blob/master/vibrate/main.m
 }
 
 @end
