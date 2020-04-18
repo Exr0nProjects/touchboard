@@ -1,0 +1,14 @@
+[
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-std=gnu++2a",
+            "-o",
+            "main",
+            "main.cpp"
+        ],
+        "directory": "/Users/lamnguyen/Desktop/projects/touchboard/libpointing_test",
+        "file": "main.cpp"
+    }
+]
